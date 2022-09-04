@@ -4,12 +4,13 @@ import { jwtVerify } from 'jose';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Data = {
-  payload: any;
+  data: any;
 };
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  res.status(200).json({ name: 'John Doe' });
+  /* return new Error('custom error'); */
+  res.status(200).json({ data: 'You are in admin-settings section.' });
 }
